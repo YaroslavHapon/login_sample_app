@@ -1,0 +1,35 @@
+{
+  "name": "login_server",
+  "version": "1.0.0",
+  "description": "login server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "expressm",
+    "mongodb",
+    "jwt",
+    "mongoose"
+  ],
+  "author": "Yaroslav Hapon",
+  "license": "MIT",
+  "devDependencies": {
+    "body-parser": "^1.18.1",
+    "cors": "^2.8.4",
+    "express": "^4.15.4",
+    "jwt-simple": "^0.5.1",
+    "mongoose": "^4.11.11",
+    "morgan": "^1.8.2",
+    "nodemon": "^1.12.1",
+    "passport": "^0.4.0",
+    "passport-jwt": "^3.0.0"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^8.0.1"
+  }
+}
