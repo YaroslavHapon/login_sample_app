@@ -23,7 +23,7 @@ const localLogin = new LocalStrategy(localOptions, function (email, password, do
 });
 
 const jwtOptions = {
-  jwtFromRequest: ExtractJWT.fromHeader('Authentication'),
+  jwtFromRequest: ExtractJWT.fromHeader('authentication'),
   secretOrKey: config.secret
 };
 
@@ -33,7 +33,7 @@ const jwtLogin  = new JWTStrategy(jwtOptions, function (jwt_payload, done) {
       return done(err, false);
     }
 
-    if (user) {
+    if(user) {
       return done(null, user)
     } else {
       return done(null, false)

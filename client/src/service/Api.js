@@ -27,7 +27,7 @@ export default class Api{
   }
 
   static fetchMessage (){
-    return axios.get(`${ROOT_URL}/dashboards`, { headers: { 'Authentication': window.localStorage.getItem('token') }})
+    return axios.get(`${ROOT_URL}/dashboards`, { headers: { 'authentication': window.localStorage.getItem('token') }})
       .then(response => {
         return response.data;
       })
