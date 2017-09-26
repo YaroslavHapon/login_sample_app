@@ -4,14 +4,11 @@ import { Redirect } from 'react-router-dom'
 
 class Login extends React.Component{
   onSubmit = data => {
-    // // const { email, password } = data;
-    // console.log(data.email, data.password);
     this.props.onLogin({ email: data.email, password: data.password });
   }
 
   render () {
     const { handleSubmit, authentication } = this.props
-    // console.log(this.props.location);
     const { from } = this.props.location.state || { from: { pathname: '/dashboard' } };
     
     if (authentication.loading) {

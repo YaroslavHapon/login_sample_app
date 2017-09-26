@@ -11,7 +11,6 @@ export function* registerSaga() {
       yield call(Api.setItem, 'token', token);
       yield put({ type: SIGN_UP_SUCCESS });
     } catch (error) {
-      console.log(error);
       yield put({ type: SIGN_UP_FAILURE, payload: error });
       yield call(Api.removeItem, 'token');
     }

@@ -17,7 +17,6 @@ export default class Api{
   static signIn({ email, password }) {
     return axios.post(`${ROOT_URL}/signin`, { email, password })
       .then(response => {
-        console.log(response);
         return response.data;
       })
       .catch(error => {
@@ -28,10 +27,8 @@ export default class Api{
   }
 
   static fetchMessage (){
-    // const token =  window.localStorage.getItem('token');
     return axios.get(`${ROOT_URL}/dashboards`, { headers: { 'Authentication': window.localStorage.getItem('token') }})
       .then(response => {
-        console.log(response);
         return response.data;
       })
       .catch(error => {
