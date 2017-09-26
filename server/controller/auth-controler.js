@@ -34,7 +34,7 @@ exports.signup = function (req, res, next) {
   if(Object.keys(errors).length) {
     return res.status(422).send({ error: errors });
   }
-  console.log(req.body);
+  
   // 2. Check if there is no existing email
   User.findOne({ email: email }, function (err, existingUser) {
     if (err) return next(err);
